@@ -3,10 +3,6 @@
     --padding-value: 2em;
     --tab-title-color: var(--primary-color);
     --tab-title-color-inner: var(--primary-color-light);
-    &:last-child {
-        --tab-title-color: var(--secondary-color);
-        --tab-title-color-inner: var(--secondary-color);
-    }
 }
 /* .project {
     --tab-title-color: var(--primary-color);
@@ -24,6 +20,11 @@
 }
 .tab-content {
     padding: var(--padding-value);
+    
+    img {
+        width: 100%;
+        border-radius: 0.1em;
+    }
 }
 .tab-links {
     padding: var(--padding-value);
