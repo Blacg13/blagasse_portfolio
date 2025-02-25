@@ -1,0 +1,73 @@
+#root {
+  max-width: 1280px;
+  height: 100vh;
+  margin: 0 auto;
+}
+/*================================================================================================*/
+/** Layout & Media Queries **/
+/*================================================================================================*/
+main {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 0.5em;
+}
+/*================================================================================================*/
+/** General styles **/
+/*================================================================================================*/
+:root {
+  background-color: var(--bg-color);
+}
+* {
+  box-sizing: border-box;
+  color: var(--txt-color);
+}
+/* ----------------------------------------------------------------------------------------------- */
+/**links**/
+/* ----------------------------------------------------------------------------------------------- */
+a {
+  padding: 0.1em 0.8em 0.1em 0.8em;
+  background-color: var(--secondary-color);
+  border-radius: var(--radius-link);
+  display: flex;
+  flex-flow: row nowrap;
+
+  background-color: var(--secondary-color);
+  color: var(--txt-color);
+  &:hover {
+      background-color: var(--primary-color);
+      transition: all 0.1s ease-in-out;
+  }
+  &:active {
+      background-color: var(--primary-color);
+      filter: brightness(1.2);
+      transition: all 0.1s ease-in-out;
+  }
+  p {
+      color: var(--bg-color);
+  }
+}
+/*================================================================================================*/
+/** Typography **/
+/*================================================================================================*/
+p, a, li, div, span {
+  font-family: var(--text-font);
+  font-size: 1em;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--title-font);
+  font-size: 1.5em;
+  letter-spacing: 0.07em;
+  line-height: 1.5em;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("/src//assets/fonts/MontserratAlternates-Regular.otf"), format("opentype");
+  font-weight: normal;
+  font-size: normal;
+}
+@font-face {
+  font-family: "Consolas";
+  src: url("/src/assets/fonts/CONSOLA.TTF"), format("opentype");
+  font-weight: normal;
+  font-size: normal;
+}

@@ -1,0 +1,83 @@
+.about, .project {
+    background-color: transparent;
+    --padding-value: 2em;
+}
+.project {
+    --tab-title-color: var(--primary-color);
+    --tab-title-color-inner: var(--primary-color-light);
+}
+.about {
+    --tab-title-color: var(--secondary-color);
+    --tab-title-color-inner: var(--secondary-color);
+}
+.tab-spin-title {
+    h3 {
+        padding-left: 0.9em;
+        user-select: none;
+    }
+}
+.tab-content {
+    padding: var(--padding-value);
+}
+.tab-links {
+    padding: var(--padding-value);
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    gap: 1em;
+
+    a {
+        line-height: 2em;
+    }
+}
+/* ----------------------------------------------------------------------------------------------- */
+/**special typo for titles**/
+/* ----------------------------------------------------------------------------------------------- */
+section:not(:last-child) {
+    h3 {
+        text-transform: capitalize;
+        word-spacing: -0.6em;
+
+        &::before {
+            content: "./";
+        }
+    }
+}
+section:last-child {
+    h3 {
+        word-spacing: -0.6em;
+        
+        &::before {
+            content: ".";
+        }
+    }
+}
+/* ----------------------------------------------------------------------------------------------- */
+/**spinning animation**/
+/* ----------------------------------------------------------------------------------------------- */
+.flip-card-container {
+    width: 100%;
+    height: 100%;
+}
+.flip-card-recto, .flip-card-verso {
+    cursor: pointer;
+    padding: 0.2em;
+    width: 100%;
+    height: min-content;
+    transition-delay: 200ms;
+    &:hover {
+        box-shadow: inset 0 0 64px 64px var(--tab-title-color-inner);
+        transition: 0.8s;
+        background-color: var(--tab-title-color-inner);
+    }
+}
+.flip-card-verso {
+    border-radius: var(--radius-value);
+    border: solid 7px var(--tab-title-color);
+}
+.flip-card-recto {
+    border-radius: var(--reverse-radius-value);
+    transform: rotateY(180deg);
+    border: solid 7px var(--tab-title-color);
+    background-color: var(--tab-title-color);
+}

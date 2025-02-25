@@ -1,0 +1,43 @@
+.title-all {
+    border-radius: var(--radius-value);
+    border: solid 7px var(--tertiary-color);
+}
+.title-me {
+    padding: 0.2em;
+    align-items: center;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+        img {
+                height: 76px;
+                border-radius: 50%;
+        }
+        h1 {
+                width: max-content;
+                line-height: 0.8em;
+        }
+        h2 {
+                line-height: 0.8em;
+                color: var(--tertiary-color);
+        }
+}
+.title-links {
+    padding: 0.8em;
+    display: flex;
+    justify-content: space-evenly;
+    a {
+        line-height: 0.1em;
+    }
+}
+#file-icon {
+    width: 15px;
+    height: 15px;
+}
+#logo-github {
+    width: 16px;
+    height: 16px;
+}
+#logo-linkedin {
+    width: 24px;
+    height: 24px;
+}
