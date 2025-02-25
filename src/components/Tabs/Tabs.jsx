@@ -8,6 +8,7 @@ const Tabs = () => {
       id: 1,
       tabTopic: 'about',
       tabTitle: 'about me',
+      img: undefined,
       tabContent: [
         "I'm passionate about programming and designing intuitive website interfaces",
         "Currently training to become a frontenddeveloper, I'm diving deep into JavaScript and React with a relentless curiosity to master and optimize every line of code.",
@@ -19,6 +20,7 @@ const Tabs = () => {
       tabTitle: 'rock paper scissors',
       projectDate: new Date(2024, 2),
       projectLanguages: ['HTML', 'CSS', 'JavaScript'],
+      img: undefined,
       tabContent: ['bloub', 'blabb'],
       githubProjectLink: 'https://github.com/Blacg13/IF3_PierrePapierCiseaux',
       liveProjectLink: 'https://www.whatbeatsrock.com/',
@@ -29,6 +31,7 @@ const Tabs = () => {
       tabTitle: 'Integrity Project',
       projectDate: new Date(2025, 1),
       projectLanguages: ['WordPress', 'React', 'Scss'],
+      img: undefined,
       tabContent: ['bloub', 'blabb'],
       githubProjectLink: null,
       liveProjectLink: 'https://www.integrityproject.be/',
@@ -39,6 +42,7 @@ const Tabs = () => {
       tabTitle: 'FestivalFlow',
       projectDate: new Date(2024, 10),
       projectLanguages: ['nodeJS', 'React', 'MongoDB', 'CSS'],
+      img: undefined,
       tabContent: ['bloub', 'blabb'],
       githubProjectLink: 'https://github.com/Blacg13/FestivalFlow',
       liveProjectLink: null,
@@ -47,6 +51,7 @@ const Tabs = () => {
       id: 5,
       tabTopic: 'about',
       tabTitle: 'gitignore',
+      img: undefined,
       tabContent: ['bloub', 'blabb'],
       githubProjectLink: null,
       liveProjectLink: null,
@@ -81,6 +86,7 @@ const Tab = ({
   title,
   // date,
   // language,
+  img,
   content,
   githubLink,
   liveLink,
@@ -115,14 +121,15 @@ const Tab = ({
         </div>
       </animated.div>
       <animated.div className={style['tab-content']} style={fade}>
+        {img ? <img src={img} alt={`view of ` + title} /> : null}
         <p>{content}</p>
         <div className={style['tab-links']}>
-          <a href={githubLink} target='_blank' rel='noopener noreferrer'>
+          {githubLink ? <a href={githubLink} target='_blank' rel='noopener noreferrer'>
             See the code on github
-          </a>
-          <a href={liveLink} target='_blank' rel='noopener noreferrer'>
+          </a> : null }
+          {liveLink ? <a href={liveLink} target='_blank' rel='noopener noreferrer'>
             See the hosted site
-          </a>
+          </a> : null}
         </div>
       </animated.div>
     </section>
