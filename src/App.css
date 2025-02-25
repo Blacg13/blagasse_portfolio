@@ -1,8 +1,9 @@
 #root {
   max-width: 1280px;
-  height: 100vh;
+  height: 90dvh;
   margin: 0 auto;
   display: flex;
+  overflow: hidden;
 }
 /*================================================================================================*/
 /** Layout & Media Queries **/
@@ -11,6 +12,11 @@ main {
   display: flex;
   flex-flow: column nowrap;
   gap: 0.5em;
+  max-height: 90%;
+  overflow: scroll;
+  scrollbar-width: thin;
+  scroll-behavior: smooth;
+  scrollbar-color: var(--primary-color);
 }
 @media screen and (max-width: 1000px) {
   #root {
@@ -22,12 +28,13 @@ main {
     flex-flow: row nowrap;
     align-items: center;
     justify-content: space-around;
+    gap: 5em;
 
     header {
       min-width: 25em;
     }
     main {
-      width: 50%;
+      min-width: 50%;
     }
   }
 }
