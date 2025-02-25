@@ -3,10 +3,6 @@
     --padding-value: 2em;
     --tab-title-color: var(--primary-color);
     --tab-title-color-inner: var(--primary-color-light);
-    &:last-child {
-        --tab-title-color: var(--secondary-color);
-        --tab-title-color-inner: var(--secondary-color);
-    }
 }
 /* .project {
     --tab-title-color: var(--primary-color);
@@ -24,6 +20,11 @@
 }
 .tab-content {
     padding: var(--padding-value);
+    
+    img {
+        width: 100%;
+        border-radius: 0.1em;
+    }
 }
 .tab-links {
     padding: var(--padding-value);
@@ -39,17 +40,23 @@
 /* ----------------------------------------------------------------------------------------------- */
 /**special typo for titles**/
 /* ----------------------------------------------------------------------------------------------- */
-section:not(:last-child) {
+.project, .about {
     h3 {
         text-transform: capitalize;
         word-spacing: -0.6em;
-
-        &::before {
-            content: "./";
-        }
     }
 }
-section:last-child {
+.about {
+    h3::before {
+        content: "./";
+    }
+}
+.project {
+    h3::before {
+        content: "./project_ ";
+    }
+}
+/* section:last-child {
     h3 {
         word-spacing: -0.6em;
         
@@ -57,7 +64,7 @@ section:last-child {
             content: ".";
         }
     }
-}
+} */
 /* ----------------------------------------------------------------------------------------------- */
 /**spinning animation**/
 /* ----------------------------------------------------------------------------------------------- */
