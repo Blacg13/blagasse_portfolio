@@ -1,15 +1,21 @@
 .about, .project {
     background-color: transparent;
     --padding-value: 2em;
+    --tab-title-color: var(--primary-color);
+    --tab-title-color-inner: var(--primary-color-light);
+    &:last-child {
+        --tab-title-color: var(--secondary-color);
+        --tab-title-color-inner: var(--secondary-color);
+    }
 }
-.project {
+/* .project {
     --tab-title-color: var(--primary-color);
     --tab-title-color-inner: var(--primary-color-light);
 }
 .about {
     --tab-title-color: var(--secondary-color);
     --tab-title-color-inner: var(--secondary-color);
-}
+} */
 .tab-spin-title {
     h3 {
         padding-left: 0.9em;

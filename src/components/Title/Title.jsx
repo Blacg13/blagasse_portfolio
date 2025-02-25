@@ -9,7 +9,7 @@ const Title = () => {
         />
         <div className={style['title-title']}>
           <h1>Bénédicte Lagasse</h1>
-          <h2>Frontend Developer</h2>
+          <h2>Web Developer</h2>
         </div>
       </div>
       <div className={style['title-links']}>

@@ -1,6 +1,8 @@
 .title-all {
     border-radius: var(--radius-value);
     border: solid 7px var(--tertiary-color);
+    /* position: fixed; */
+    /* width: 100%; */
 }
 .title-me {
     padding: 0.2em;
@@ -9,12 +11,16 @@
     flex-flow: row nowrap;
     justify-content: space-evenly;
         img {
-                height: 76px;
+                height: 80px;
                 border-radius: 50%;
+            
+                @media screen and (max-width: 425px) {
+                display: none;
+            }
         }
         h1 {
                 width: max-content;
-                line-height: 0.8em;
+                line-height: 0.9em;
         }
         h2 {
                 line-height: 0.8em;
