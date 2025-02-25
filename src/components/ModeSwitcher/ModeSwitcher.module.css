@@ -1,5 +1,12 @@
-button {
-    width: 100px;
-    height: 100px;
-    background-color: chartreuse;
+.mode-switcher {
+    --size: 2.5em;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: var(--size);
+    width: calc(var(--size) * 2);
+    height: var(--size);
+    border-radius: 10em;
+    border: solid 0.2em var(--secondary-color);
+    transition: 0.3s;
 }
