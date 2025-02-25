@@ -1,6 +1,6 @@
 import style from './Tabs.module.css';
 import { useState } from 'react';
-import { useSpring, useSprings, animated } from '@react-spring/web';
+import { useSpring, animated } from '@react-spring/web';
 
 const Tabs = () => {
   const tabs = [
@@ -79,8 +79,8 @@ const Tab = ({
   tabId,
   topic,
   title,
-  date,
-  language,
+  // date,
+  // language,
   content,
   githubLink,
   liveLink,
