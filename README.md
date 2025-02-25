@@ -1,2 +1,2 @@
-# portfolio-react
-Hi, welcome to my first portfolio :-)
+# Portfolio
+Hi, welcome to my portfolio :-)
