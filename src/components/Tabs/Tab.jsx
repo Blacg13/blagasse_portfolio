@@ -39,7 +39,7 @@ const Tab = ({
     return (
       <section 
       id={`${tabId}_${topic}`} 
-      className={style[`${topic}`]} 
+      className={hasClicked ? style[`${topic}-clicked`] : style[`${topic}`]} 
       >
         <animated.div
           className={style['tab-spin-title']}

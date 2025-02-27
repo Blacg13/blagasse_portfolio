@@ -1,13 +1,13 @@
 
-.about, .project, .secret-tab {
+.about, .project, .project-clicked, .about-clicked, .secret-tab {
     background-color: transparent;
     --padding-value: 2em;
 }
-.project, .about {
+.project-clicked, .about-clicked {
     --tab-title-color: var(--primary-color);
     --tab-title-color-inner: var(--primary-color-light);
 }
-.secret-tab {
+.secret-tab, .project, .about {
     --tab-title-color: var(--secondary-color);
     --tab-title-color-inner: var(--secondary-color);
 }
@@ -39,18 +39,18 @@
 /* ----------------------------------------------------------------------------------------------- */
 /**special typo for titles**/
 /* ----------------------------------------------------------------------------------------------- */
-.project, .about {
+.project, .about, .about-clicked, .project-clicked {
     h3 {
         text-transform: capitalize;
         word-spacing: -0.6em;
     }
 }
-.about {
+.about, .about-clicked {
     h3::before {
         content: "./";
     }
 }
-.project {
+.project, .project-clicked {
     h3::before {
         content: "./project_ ";
     }
