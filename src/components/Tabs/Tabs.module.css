@@ -1,17 +1,15 @@
-.about, .project {
+.about, .project, .secret-tab {
     background-color: transparent;
     --padding-value: 2em;
+}
+.project, .about {
     --tab-title-color: var(--primary-color);
     --tab-title-color-inner: var(--primary-color-light);
 }
-/* .project {
-    --tab-title-color: var(--primary-color);
-    --tab-title-color-inner: var(--primary-color-light);
-}
-.about {
+.secret-tab {
     --tab-title-color: var(--secondary-color);
     --tab-title-color-inner: var(--secondary-color);
-} */
+}
 .tab-spin-title {
     h3 {
         padding-left: 0.9em;
@@ -56,7 +54,7 @@
         content: "./project_ ";
     }
 }
-#secretTab {
+.secret-tab {
     h3::before {
         content: ".";
     }
