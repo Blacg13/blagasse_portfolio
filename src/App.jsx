@@ -7,10 +7,11 @@ function App() {
   return (
     <>
       <header>
-        <Title /> <ModeSwitcher />
+        <Title /> 
       </header>
       <main>
         <Tabs />
+        <ModeSwitcher />
       </main>
     </>
   );
