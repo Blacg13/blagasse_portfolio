@@ -37,27 +37,24 @@ const Tabs = () => {
       liveProjectLink: null,
     },
   ];
-  // const tabCount = React.Children.count(children)
-  // const [activatedTab, setActivateTab] = useState({})
-  // const activateTab = (index) => {
-  //   setActivateTab(index)
-  //   if (!activateTab[index]) {
-  //     const updateTabs = { ...activatedTab, [index]: true };
-  //     setActivatedTabs(updatedTabs);
+  const [haveClicked, setHaveClicked] = useState(new Set())
 
-  //     if (Object.keys(updatedTabs).length === tabCount) {
-  //       console.log('Tous les onglets ont été activés au moins une fois !');
-  //   }
-  // }
-  // const [count, setCount] = useState(0)
-  // const easterEgg = () => {
-  //   setCount(count + 1)
-  //   console.log("count: ", count);
-  // }
+  const handleActivation = (childId) => {
+    setHaveClicked((prev) => {
+      const newSet = new Set(prev);
+      newSet.add(childId);
+      return newSet;
+    });
+    if (haveClicked.size === tabs.length - 1) {
+      console.log("YOUPI: " + tabs.length);
 
+    }
+  };
   return (
     <>
       {tabs.map((tab) => {
+    console.log(haveClicked, haveClicked.size); 
+        
         return (
           <Tab
             key={tab.id}
@@ -70,8 +67,7 @@ const Tabs = () => {
             content={tab.tabContent}
             githubLink={tab.githubProjectLink}
             liveLink={tab.liveProjectLink}
-            // onClick={() => activateTab(index)}
-            // handleClick={easterEgg}
+            onActivate={handleActivation}
           />
         );
       })}
@@ -90,15 +86,18 @@ const Tab = ({
   content,
   githubLink,
   liveLink,
-  // handleClick,
+  onActivate,
 }) => {
   const [isActive, setActive] = useState(false);
-  const [count, setCount] = useState(0)
+  const [hasClicked, setHasClicked] = useState(false)
   const handleClick = () => {
     setActive(!isActive)
-    setCount(count + 1)
-    console.log("easterEgg: ", count);
+    if (!hasClicked) {
+      setHasClicked(true)
+      onActivate(tabId)
+    }    
   };
+  // animations ----------------------------------
   const spin = useSpring({
     transform: `rotateY(${isActive ? 180 : 0}deg)`,
     config: { mass: 3, tension: 130, friction: 30 },
@@ -110,7 +109,7 @@ const Tab = ({
     config: { mass: 5, tension: 150, friction: 50 },
     delay: isActive ? 200 : 0,
   });
-  
+  //------------------------------------------------
   return (
     <section id={`${tabId}_${topic}`} className={style[`${topic}`]}>
       <animated.div
