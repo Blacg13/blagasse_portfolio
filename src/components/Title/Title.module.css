@@ -3,6 +3,7 @@
     border: solid 7px var(--tertiary-color);
     /* position: fixed; */
     /* width: 100%; */
+    margin-bottom: 1em;
 }
 .title-me {
     padding: 0.2em;
