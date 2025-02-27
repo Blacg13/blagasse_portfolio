@@ -2,7 +2,7 @@ import style from './Tabs.module.css';
 import { useState } from 'react';
 import { animated, useSpring } from '@react-spring/web';
 
-const SecretTab = () => {
+const SecretTab = ({disclosure}) => {
     const [isActive, setActive] = useState(false);
       // animations ----------------------------------
       const spin = useSpring({
@@ -16,10 +16,19 @@ const SecretTab = () => {
         config: { mass: 5, tension: 150, friction: 50 },
         delay: isActive ? 200 : 0,
       });
+      const disclosureAnimation = useSpring({
+        opacity: disclosure ? 1 : 0,
+        display: disclosure ? 'block' : 'none',
+        transform: `translateY(${isActive ? 0 : 20}px)`,
+        config: { mass: 5, tension: 150, friction: 50 },
+        delay: disclosure ? 200 : 0,
+      });
     //------------------------------------------------
-
     return (
-        <section id={"secretTab"} className={style["secret-tab"]}>
+        <animated.section id={"secretTab"} 
+        className={style["secret-tab"]} 
+        style={disclosureAnimation} 
+        >
             <animated.div
           className={style['tab-spin-title']}
           style={spin}
@@ -38,8 +47,10 @@ const SecretTab = () => {
         <animated.div className={style['tab-content']} style={fade}>
           
           <p>hello world</p>
+          <button onClick={() => console.log(typeof disclosure)
+          }>disclosure ?</button>
         </animated.div>
-        </section>
+        </animated.section>
     )
 }
 export default SecretTab;
