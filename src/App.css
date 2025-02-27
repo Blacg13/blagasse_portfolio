@@ -11,8 +11,9 @@
 main {
   display: flex;
   flex-flow: column nowrap;
-  gap: 0.5em;
-  max-height: 90%;
+  justify-content: center;
+  gap: 0.8em;
+  height: 80%;
   overflow: scroll;
   scrollbar-width: thin;
   scroll-behavior: smooth;
@@ -79,7 +80,6 @@ a {
 /*================================================================================================*/
 p, a, li, div, span {
   font-family: var(--text-font);
-  font-size: 1em;
 }
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--title-font);

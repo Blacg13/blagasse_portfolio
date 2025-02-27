@@ -19,7 +19,6 @@ const SecretTab = ({disclosure}) => {
       const disclosureAnimation = useSpring({
         opacity: disclosure ? 1 : 0,
         display: disclosure ? 'block' : 'none',
-        transform: `translateY(${isActive ? 0 : 20}px)`,
         config: { mass: 5, tension: 150, friction: 50 },
         delay: disclosure ? 200 : 0,
       });
