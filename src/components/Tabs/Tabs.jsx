@@ -107,8 +107,8 @@ const Tab = ({
     opacity: isActive ? 1 : 0,
     display: isActive ? 'block' : 'none',
     transform: `translateY(${isActive ? 0 : 20}px)`,
-    config: { mass: 1, tension: 200, friction: 20 },
-    delay: isActive ? 100 : 0,
+    config: { mass: 5, tension: 150, friction: 50 },
+    delay: isActive ? 200 : 0,
   });
   
   return (
