@@ -37,6 +37,23 @@ const Tabs = () => {
       liveProjectLink: null,
     },
   ];
+  // const tabCount = React.Children.count(children)
+  // const [activatedTab, setActivateTab] = useState({})
+  // const activateTab = (index) => {
+  //   setActivateTab(index)
+  //   if (!activateTab[index]) {
+  //     const updateTabs = { ...activatedTab, [index]: true };
+  //     setActivatedTabs(updatedTabs);
+
+  //     if (Object.keys(updatedTabs).length === tabCount) {
+  //       console.log('Tous les onglets ont été activés au moins une fois !');
+  //   }
+  // }
+  // const [count, setCount] = useState(0)
+  // const easterEgg = () => {
+  //   setCount(count + 1)
+  //   console.log("count: ", count);
+  // }
 
   return (
     <>
@@ -53,6 +70,8 @@ const Tabs = () => {
             content={tab.tabContent}
             githubLink={tab.githubProjectLink}
             liveLink={tab.liveProjectLink}
+            // onClick={() => activateTab(index)}
+            // handleClick={easterEgg}
           />
         );
       })}
@@ -71,8 +90,15 @@ const Tab = ({
   content,
   githubLink,
   liveLink,
+  // handleClick,
 }) => {
   const [isActive, setActive] = useState(false);
+  const [count, setCount] = useState(0)
+  const handleClick = () => {
+    setActive(!isActive)
+    setCount(count + 1)
+    console.log("easterEgg: ", count);
+  };
   const spin = useSpring({
     transform: `rotateY(${isActive ? 180 : 0}deg)`,
     config: { mass: 3, tension: 130, friction: 30 },
@@ -90,7 +116,7 @@ const Tab = ({
       <animated.div
         className={style['tab-spin-title']}
         style={spin}
-        onClick={() => setActive(!isActive)}
+        onClick ={handleClick}
       >
         <div className={style['flip-card-container']}>
           <div
