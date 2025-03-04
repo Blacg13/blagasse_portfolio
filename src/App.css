@@ -28,13 +28,13 @@ main {
     flex-flow: row nowrap;
     align-items: center;
     justify-content: space-around;
-    gap: 5em;
+    gap: 10%;
 
     header {
       min-width: 25em;
     }
     main {
-      min-width: 50%;
+      width: 60%;
     }
   }
 }

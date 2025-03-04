@@ -45,7 +45,8 @@ const SecretTab = ({disclosure}) => {
         </animated.div>
         <animated.div className={style['tab-content']} style={fade}>
           
-          <p>hello world</p>
+          <p>hobbies</p>
+          <p>ce que j'écoute et je lis pour la veille technologique</p>
           <button onClick={() => console.log(typeof disclosure)
           }>disclosure ?</button>
         </animated.div>
