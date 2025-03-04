@@ -37,6 +37,13 @@ const Tabs = () => {
       liveProjectLink: null,
     },
   ];
+
+  const sortedTabs = tabs.sort((a, b) => {
+    if (!a.projectDate) return -1; 
+    if (!b.projectDate) return 1;  
+    return b.projectDate - a.projectDate; 
+  });
+
   const [haveClicked, setHaveClicked] = useState(new Set())
   const [isUnfolded, setUnfolded] = useState(false)
   const handleActivation = (childId) => {
@@ -53,9 +60,7 @@ const Tabs = () => {
   
   return (
     <>
-      {tabs.map((tab) => {
-        console.log("isUnfolded: " + isUnfolded + " " + typeof isUnfolded); //bool
-        
+      {sortedTabs.map((tab) => {        
         return (
           <Tab
             key={tab.id}
