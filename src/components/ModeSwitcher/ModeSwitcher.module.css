@@ -1,81 +1,39 @@
-.mode-switcher {
-    /* position */
+.mode-dark, .mode-light {
+    /*=== layout ===*/
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.2em;
+    /*=== size ===*/
+    --size: 2.5em;
+    width: calc(var(--size) * 1.7);
+    height: var(--size);
+    /*=== style ===*/
+    margin: var(--size);
+    border-radius: 10em;
+    border: solid 0.2em var(--secondary-color);
+    /*=== position ===*/
     align-self: end;
     @media screen and (min-width: 1000px) {
         position: absolute;
         right: 0;
         top: 0;
     }
-
-    /* size */
-    --size: 2.5em;
-    width: calc(var(--size) * 1.7);
-    height: var(--size);
-    /* style */
-    margin: var(--size);
-    border-radius: 10em;
-    border: solid 0.2em var(--secondary-color);
-    transition: 0.3s;
-    /* padding: 0.02em; */
-
-    /* display: flex; */
-
-    .moon, .sun {
-        /* position: absolute; */
-        height: 2em;
-        width: 2em;
+    div {
+        height: 1.8em;
+        width: 1.8em;
         border-radius: 50%;
-        /* transition: 0.3s; */
-        /* border-color: solid 2rem lime; */
+    }
+}
+.mode-dark {
+    div {
+        background-color: transparent;
+        box-shadow: inset 0.5em 0.2em 0em 0.1em var(--txt-color);
+    }
+}
+.mode-light {
+    div {
         background-color: var(--txt-color);
     }
-    .moon {
-        box-shadow: inset 28px -4px 0px 0px var(--bg-color);
-        /* align-self: flex-start; */
-        /* background-color: lime; */
-        left: 0;
-    }
-
-    .sun {
-        /* align-self: end; */
-        right: 0;
-        /* background-color: red; */
-
-    }
-    /* label {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        border-radius: 50px;
-        border: solid 2px lime;
-    }
-    input {
-        position: absolute;
-        display: none;
-    }
-    .slider {
-        position: absolute;
-        width: 90%;
-        height: 90%;
-        border-radius: 50px;
-        transition: 0.3s;
-        background-color: var(--txt-color);
-        border: solid 1px yellow;
-    }
-
-    .slider::before {
-    content: "";
-    position: absolute;
-    top: 13px;
-    left: 16px;
-    width: 75px;
-    height: 75px;
-    border-radius: 50%;
-    box-shadow: inset 28px -4px 0px 0px var(--light);
-    transition: 0.3s;
-    }
-    input:checked, .slider {
-        transform: translateX(95px);
-        box-shadow: none;
-    } */
 }

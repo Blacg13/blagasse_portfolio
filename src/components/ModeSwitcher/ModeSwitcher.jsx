@@ -1,5 +1,6 @@
 import style from './ModeSwitcher.module.css';
 import { useRef, useState } from 'react';
+import { useSpring, animated } from '@react-spring/web';
 const ModeSwitcher = () => {
   const HTML = useRef(document.documentElement);
   localStorage.setItem("theme", HTML.current.getAttribute("data-theme"));
@@ -14,9 +15,17 @@ const ModeSwitcher = () => {
     switchTheme();
     setTheme(theme === "dark" ? "light" : "dark");
   }
+  // animations ----------------------------------
+    const transition = useSpring({
+      transform: `translateX(${HTML.current.getAttribute("data-theme") === "dark" ? 0.05 : 1.6}em)`,
+      config: { mass: 1, tension: 130, friction: 30 },
+    });
+  //------------------------------------------------
   return (
-    <button className={style['mode-switcher']} onClick={handleClick}>
-      <div className={HTML.current.getAttribute("data-theme") === "dark" ? style['moon'] : style['sun']}></div>
+    <button 
+      className={HTML.current.getAttribute("data-theme") === "dark" ? style['mode-dark'] : style['mode-light']}
+      onClick={handleClick}>
+      <animated.div style={transition} ></animated.div>
     </button>
   );
 };
