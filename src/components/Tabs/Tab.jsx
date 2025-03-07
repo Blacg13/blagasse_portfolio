@@ -1,13 +1,13 @@
 import style from './Tabs.module.css';
 import { useState } from 'react';
 import { useSpring, animated } from '@react-spring/web';
+import tech from "./tech.js"
 
 const Tab = ({
     tabId,
     topic,
     title,
-    // date,
-    // language,
+    techUsed,
     img,
     content,
     githubLink,
@@ -36,6 +36,8 @@ const Tab = ({
       delay: isActive ? 200 : 0,
     });
     //------------------------------------------------
+    console.log("techUsed: ", techUsed);
+    
     return (
       <section 
       id={`${tabId}_${topic}`} 
@@ -58,6 +60,25 @@ const Tab = ({
         </animated.div>
         <animated.div className={style['tab-content']} style={fade}>
           {img ? <img src={`/src/assets/img/${img}`} alt={`view of ` + title} /> : null}
+          <div className={style['tab-tech']}>
+          {techUsed ? techUsed.map((techItem) => {
+            console.log(techItem)
+            return (
+              <div key={techItem}>
+                {tech.filter((tech) => tech.title === techItem).map((tech) => {
+                  return (
+                    <img
+                      key={tech.id}
+                      src={tech.img}
+                      alt={tech.title}
+                    />
+                  );
+                })}
+              <p>{techItem}</p>
+              </div>
+            );
+          }) : null}
+          </div>
           <p>{content}</p>
           <div className={style['tab-links']}>
             {githubLink ? <a href={githubLink} target='_blank' rel='noopener noreferrer'>

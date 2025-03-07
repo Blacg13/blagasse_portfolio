@@ -1,4 +1,7 @@
 
+/* ----------------------------------------------------------------------------------------------- */
+/**general style**/
+/* ----------------------------------------------------------------------------------------------- */
 .about, .project, .project-clicked, .about-clicked, .secret-tab {
     background-color: transparent;
     --padding-value: 2em;
@@ -19,21 +22,9 @@
 }
 .tab-content {
     padding: var(--padding-value);
-    
     img {
         width: 100%;
         border-radius: 0.1em;
-    }
-}
-.tab-links {
-    padding: var(--padding-value);
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    gap: 1em;
-
-    a {
-        line-height: 2em;
     }
 }
 /* ----------------------------------------------------------------------------------------------- */
@@ -88,4 +79,45 @@
     transform: rotateY(180deg);
     border: solid 7px var(--tab-title-color);
     background-color: var(--tab-title-color);
+}
+/* ----------------------------------------------------------------------------------------------- */
+/**style of elements**/
+/* ----------------------------------------------------------------------------------------------- */
+.tab-tech {
+    padding: .5em;
+    display: flex;
+    gap: 2em;
+    justify-content: center;
+    
+    div {
+        border: solid 0.2em var(--primary-color);
+        /* background-color: var(--secondary-color); */
+        /* background-image: radial-gradient(closest-side at 23%, var(--secondary-color), transparent 99%); */
+        border-radius: 1.5em;
+        font-size: 0.8em;
+        line-height: 0.1em;
+        padding-left: 1ch;
+        padding-right: 1ch;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5em;
+
+        img {
+            height: 1.3em;
+            color: #3c873a;
+        }
+    }
+}
+.tab-links {
+    padding: var(--padding-value);
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    gap: 1em;
+
+    a {
+        line-height: 2em;
+    }
 }
