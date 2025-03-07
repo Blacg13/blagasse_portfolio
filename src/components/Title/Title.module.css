@@ -22,6 +22,8 @@
         h1 {
                 width: max-content;
                 line-height: 0.9em;
+                font-size: 1.5em;
+                margin-block: 1em;
         }
         h2 {
                 line-height: 0.8em;

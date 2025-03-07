@@ -35,9 +35,7 @@ const Tab = ({
       config: { mass: 5, tension: 150, friction: 50 },
       delay: isActive ? 200 : 0,
     });
-    //------------------------------------------------
-    console.log("techUsed: ", techUsed);
-    
+    //------------------------------------------------    
     return (
       <section 
       id={`${tabId}_${topic}`} 
@@ -62,7 +60,6 @@ const Tab = ({
           {img ? <img src={`/src/assets/img/${img}`} alt={`view of ` + title} /> : null}
           <div className={style['tab-tech']}>
           {techUsed ? techUsed.map((techItem) => {
-            console.log(techItem)
             return (
               <div key={techItem}>
                 {tech.filter((tech) => tech.title === techItem).map((tech) => {
