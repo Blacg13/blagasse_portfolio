@@ -35,6 +35,20 @@ const tech = [
         // img: "https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg",
         img: "/src/assets/icons/nodejs-logo.svg",
         color: "#3c873a"
+    },
+    {
+        id: 7,
+        title: "Phaser",
+        img: "https://cdn.phaser.io/images/logo/logo-download.png",
+        // color: "#1F0823"
+        color: "#1A1234"
+    },
+    {
+        id: 8,
+        title: ".NET",
+        // img: "https://github.com/dotnet/brand/blob/main/logo/dotnet-logo.png",
+        img: "/src/assets/icons/dotnet-logo.png",
+        color: "#512BD4"
     }
 ]
 export default tech

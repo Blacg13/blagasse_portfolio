@@ -38,6 +38,7 @@
   --title-font: "Consolas";
   --text-font: "Montserrat";
   
+  --single-radius-value: 0.5em;
   --radius-value: 1.5em 0.5em 1.5em 1.5em;
   /* --radius-value : 20px 5px 20px 20px; */
   --reverse-radius-value: 0.5em 1.5em 1.5em 1.5em;

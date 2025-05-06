@@ -21,6 +21,17 @@ const tabs = [
       liveProjectLink: 'https://www.whatbeatsrock.com/',
     },
     {
+      id: 3,
+      tabTopic: 'project',
+      tabTitle: 'Greenier please',
+      projectDate: new Date(2024, 10),
+      projectLanguages: ['Phaser', 'React', 'CSS3'],
+      tabImg: "greenier-please.png",
+      tabContent: ['This website hosts a game designed to raise awareness about green IT. It was created during a hackathon at Interface3, in October 23-25 2024. ', 'In the game, you take on the role of a recruiter tasked with selecting the CV that demonstrates the best environmental practices in IT. Be quick – you only have 30 seconds per round to make your choice! In each round, you\'ll receive an explanation of the correct answer and its source. '],
+      githubProjectLink: 'https://github.com/Blacg13/IF3_Greenier_please',
+      liveProjectLink: null,
+    },
+    {
       id: 4,
       tabTopic: 'project',
       tabTitle: 'FestivalFlow',
@@ -31,6 +42,17 @@ const tabs = [
       githubProjectLink: 'https://github.com/Blacg13/FestivalFlow',
       liveProjectLink: null,
     },
+    {
+      id: 5,
+      tabTopic: 'project',
+      tabTitle: 'Disneydle',
+      projectDate: new Date(2025, 4),
+      projectLanguages: ['.NET', 'React', 'CSS3'],
+      tabImg: "disneydle.png",
+      tabContent: ['This playful side project was born from a shared idea between a classmate and me: adapting the Pokedle concept to Disney characters. ', 'She handled the backend while I focused on the frontend. Although the site is still a work in progress, we decided to deploy an early version to share it with friends and family. ', 'At the moment, the quote quiz is partially functional, and the UI still needs some polish — but it\'s been a fun way to explore the full development cycle and experiment with new ideas. '],
+      githubProjectLink: 'https://github.com/Blacg13/IF3_Disneydle_WP',
+      liveProjectLink: 'https://disneydle.vercel.app/',
+    }
   ];
   
   export default tabs;

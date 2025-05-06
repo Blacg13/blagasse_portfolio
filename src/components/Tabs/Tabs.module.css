@@ -121,3 +121,35 @@
         line-height: 2em;
     }
 }
+/* ----------------------------------------------------------------------------------------------- */
+/**style of elements**/
+/* ----------------------------------------------------------------------------------------------- */
+.contact-form {
+    height: min-content;
+    padding: 1em;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1em;
+    div {
+        display: flex;
+        justify-content: stretch;
+        gap: 0.5em;
+    }
+    input {
+        min-height: 4em;
+        width: 100%;
+        padding: 0.5em;
+        border-radius: var(--single-radius-value);
+        
+        border: solid 0.1em var(--secondary-color);
+        background-color: var(--bg-color);
+        color: var(--txt-color);
+        &:hover, &:active, &::content {
+            background-color: var(--primary-color);
+        }
+    .message {
+        height: 100ch;
+        
+    }
+    }
+}
