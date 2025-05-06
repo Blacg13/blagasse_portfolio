@@ -61,16 +61,18 @@ const SecretTab = ({disclosure}) => {
           <p>If you're interested in my work, don't hesitate to contact me : </p>
           <form onSubmit={handleSubmit} className={style['contact-form']}>
             <div>
-              <input name='firstname' placeholder='First name' type="text" required/>
-              <input name='lastname' placeholder='Last name' type="text" required/>
-            </div>
-            <div>
-              <input name='email' placeholder='Email' type="text" required/>
-              <input name='phone' placeholder='Phone number' type="text" />
+              <div>
+                <input name='firstname' placeholder='First name' type="text" required/>
+                <input name='lastname' placeholder='Last name' type="text" required/>
+              </div>
+              <div>
+                <input name='email' placeholder='Email' type="text" required/>
+                <input name='phone' placeholder='Phone number' type="text" />
+              </div>
             </div>
               <input name='object' placeholder='Object' type="text" required/>
-              <input name='message' placeholder='Message' type="text" className={style['message']} required/>
-              <button type='submit'>Send</button>
+              <textarea name='message' placeholder='Message' rows='6' className={style['message']} required/>
+              <button type='submit' className={style['send-button']}>Send</button>
           </form>
         </animated.div>
         </animated.section>
