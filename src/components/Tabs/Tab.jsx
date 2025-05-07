@@ -2,6 +2,7 @@ import style from './Tabs.module.css';
 import { useState } from 'react';
 import { useSpring, animated } from '@react-spring/web';
 import tech from "./tech.js"
+import image from "../../assets/images/"
 
 const Tab = ({
     tabId,
@@ -57,7 +58,7 @@ const Tab = ({
           </div>
         </animated.div>
         <animated.div className={style['tab-content']} style={fade}>
-          {img ? <img src={`./src/assets/images/${img}`} alt={`view of ` + title} /> : null}
+          {img ? <img src={image.img} alt={`view of ` + title} /> : null}
           <div className={style['tab-tech']}>
           {techUsed ? techUsed.map((techItem) => {
             return (
