@@ -2,7 +2,7 @@
   padding-left: 1em;
   padding-right: 1em;
   max-width: 1280px;
-  height: 90dvh;
+  height: 96dvh;
   margin: 0 auto;
   display: flex;
   overflow: hidden;
@@ -30,9 +30,6 @@ main {
 }
 @media screen and (min-width: 1000px) {
   #root {
-    height: 100dvh;
-    /* padding-top: 2em; */
-    /* height: calc(95dvh-1em); */
     align-self: flex-end;
     flex-flow: row nowrap;
     align-items: center;
@@ -95,16 +92,4 @@ h1, h2, h3, h4, h5, h6 {
   font-size: var(--title-size);
   letter-spacing: var(--letter-spacing);
   line-height: var(--line-height);
-}
-@font-face {
-  font-family: "Montserrat";
-  src: url("/src//assets/fonts/MontserratAlternates-Regular.otf"), format("opentype");
-  font-weight: normal;
-  font-size: normal;
-}
-@font-face {
-  font-family: "Consolas";
-  src: url("/src/assets/fonts/CONSOLA.TTF"), format("opentype");
-  font-weight: normal;
-  font-size: normal;
 }

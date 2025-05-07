@@ -13,15 +13,15 @@ const Title = () => {
         </div>
       </div>
       <div className={style['title-links']}>
-        <a href='/files/CV_Lagasse_frontendDev.pdf'>
+        <a target='_blank' href='/files/CV_Lagasse_frontendDev.pdf'>
           <img src='/icons/file-icon.html' alt='' id='file-icon' />
           <p>resume</p>
         </a>
-        <a href='https://github.com/Blacg13'>
+        <a target='_blank' href='https://github.com/Blacg13'>
           <img src='/icons' alt='' id='logo-github' />
           <p>github</p>
         </a>
-        <a href='https://www.linkedin.com/in/b%C3%A9n%C3%A9dicte-lagasse/'>
+        <a target='_blank' href='https://www.linkedin.com/in/b%C3%A9n%C3%A9dicte-lagasse/'>
           <img src='' alt='' id='logo-linkedin' />
           <p>linkedin</p>
         </a>
