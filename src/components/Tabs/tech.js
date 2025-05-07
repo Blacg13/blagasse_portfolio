@@ -32,7 +32,7 @@ const tech = [
     {
         id: 6,
         title: "node.js",
-        img: "/src/assets/icons/nodejs-logo.svg",
+        img: "/icons/nodejs-logo.svg",
         color: "#3c873a"
     },
     {
@@ -45,7 +45,7 @@ const tech = [
     {
         id: 8,
         title: ".NET",
-        img: "/src/assets/icons/dotnet-logo.png",
+        img: "/icons/dotnet-logo.png",
         color: "#512BD4"
     }
 ]
