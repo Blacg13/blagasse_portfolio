@@ -46,8 +46,8 @@ const tech = [
     {
         id: 8,
         title: ".NET",
-        // img: "https://github.com/dotnet/brand/blob/main/logo/dotnet-logo.png",
         img: "/src/assets/icons/dotnet-logo.png",
+        // img: "https://github.com/dotnet/brand/blob/main/logo/dotnet-logo.png",
         color: "#512BD4"
     }
 ]
