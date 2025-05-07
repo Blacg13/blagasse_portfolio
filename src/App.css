@@ -92,20 +92,9 @@ p, a, li, div, span, input, textarea, button {
 }
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--title-font);
-  font-size: 1.5em;
-  letter-spacing: 0.07em;
-  line-height: 1.5em;
-}
-@media screen and (max-width: 1000px) {
-  * {
-    h1, h2, h3, h4, h5, h6 {
-      font-size: 1em;
-      line-height: 1.1em;
-    }
-    p, label, input, textarea, button {
-      font-size: 0.9em;
-    }
-  }
+  font-size: var(--title-size);
+  letter-spacing: var(--letter-spacing);
+  line-height: var(--line-height);
 }
 @font-face {
   font-family: "Montserrat";

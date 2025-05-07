@@ -35,9 +35,6 @@
 /** Custom properties **/
 /*================================================================================================*/
 :root {
-  --title-font: "Consolas";
-  --text-font: "Montserrat";
-  
   --single-radius-value: 0.5em;
   --radius-value: 1.5em 0.5em 1.5em 1.5em;
   /* --radius-value : 20px 5px 20px 20px; */
@@ -48,6 +45,9 @@
   
   --animate-duration: 0.8s;
 }
+/*================================================================================================*/
+/** Custom properties : COLORS **/
+/*================================================================================================*/
 :root[data-theme="light"] {
   --bg-color: #F5F5F5;
   --txt-color: #1A1B25;
@@ -63,4 +63,39 @@
   --primary-color-light: #2ca5a3;
   --secondary-color: #A4AEAB;
   --tertiary-color: #D20F2A;
+}
+/*================================================================================================*/
+/** Custom properties : FONTS **/
+/*================================================================================================*/
+@font-face {
+  font-family: "Montserrat";
+  src: url("/src//assets/fonts/MontserratAlternates-Regular.otf"), format("opentype");
+  font-weight: normal;
+  font-size: normal;
+}
+@font-face {
+  font-family: "Consolas";
+  src: url("/src/assets/fonts/CONSOLA.TTF"), format("opentype");
+  font-weight: normal;
+  font-size: normal;
+}
+:root {
+  --title-font: "Consolas";
+  --text-font: "Montserrat";
+}
+@media screen and (max-width: 1000px) {
+  :root {
+    --title-size: 1em;
+    --text-size: 0.8em;
+    --line-height: 1.2em;
+    --letter-spacing: 0.02em;
+  }
+}
+@media screen and (min-width: 1000px) {
+  :root {
+    --title-size: 1.5em;
+    --text-size: 1.5em;
+    --line-height: 1.5em;
+    --letter-spacing: 0.07em;
+  }
 }
