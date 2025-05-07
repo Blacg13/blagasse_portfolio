@@ -4,7 +4,7 @@ const Title = () => {
     <section className={style['title-all']}>
       <div className={style['title-me']}>
         <img
-          src='/src/assets/images/resume_pic.jpg'
+          src='/public/images/resume_pic.jpg'
           alt='photo corporate of Bénédicte Lagasse'
         />
         <div className={style['title-title']}>
@@ -13,12 +13,12 @@ const Title = () => {
         </div>
       </div>
       <div className={style['title-links']}>
-        <a href='/src/assets/files/CV_Lagasse_frontendDev.pdf'>
-          <img src='/src/assets/icons/file-icon.html' alt='' id='file-icon' />
+        <a href='/public/files/CV_Lagasse_frontendDev.pdf'>
+          <img src='/public/icons/file-icon.html' alt='' id='file-icon' />
           <p>resume</p>
         </a>
         <a href='https://github.com/Blacg13'>
-          <img src='/src/assets/icons' alt='' id='logo-github' />
+          <img src='/public/icons' alt='' id='logo-github' />
           <p>github</p>
         </a>
         <a href='https://www.linkedin.com/in/b%C3%A9n%C3%A9dicte-lagasse/'>
