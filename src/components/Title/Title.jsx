@@ -4,7 +4,7 @@ const Title = () => {
     <section className={style['title-all']}>
       <div className={style['title-me']}>
         <img
-          src='/src/assets/img/resume_pic.jpg'
+          src='/src/assets/images/resume_pic.jpg'
           alt='photo corporate of Bénédicte Lagasse'
         />
         <div className={style['title-title']}>
