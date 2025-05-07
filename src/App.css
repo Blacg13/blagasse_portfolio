@@ -19,9 +19,14 @@ main {
   flex-flow: column nowrap;
   gap: 0.8em;
   overflow: scroll;
-  scrollbar-width: thin;
+  scrollbar-width: none;
   scroll-behavior: smooth;
-  scrollbar-color: var(--primary-color);
+}
+@-moz-document url-prefix() {
+  main {
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary-color);
+  }
 }
 @media screen and (max-width: 1000px) {
   #root {
