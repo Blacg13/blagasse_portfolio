@@ -9,9 +9,9 @@ const Tabs = () => {
     if (!b.projectDate) return 1;  
     return b.projectDate - a.projectDate; 
   });
-
+  
   const [haveClicked, setHaveClicked] = useState(new Set())
-  const [isUnfolded, setUnfolded] = useState(false)
+  const [isUnfolded, setUnfolded] = useState(() => localStorage.getItem('isUnfolded') ?? false);
   const handleActivation = (childId) => {
     setHaveClicked((prev) => {
       const newSet = new Set(prev);
@@ -20,7 +20,7 @@ const Tabs = () => {
     });
     if (haveClicked.size === tabs.length - 1) {
       setUnfolded(true)
-      return isUnfolded
+      localStorage.setItem('isUnfolded', 'true');
     }
   };
   
