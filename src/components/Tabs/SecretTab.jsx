@@ -1,6 +1,7 @@
 import style from './Tabs.module.css';
 import { useState } from 'react';
 import { animated, useSpring } from '@react-spring/web';
+import ContactForm from './ContactForm';
 
 const SecretTab = ({disclosure}) => {
     const [isActive, setActive] = useState(false);
@@ -23,19 +24,19 @@ const SecretTab = ({disclosure}) => {
         delay: disclosure ? 200 : 0,
       });
       //------------------------------------------------
-    // form --------------------------------------------
-    const handleSubmit = (e) => {
-      e.preventDefault();
-      const form = e.target;
-      const formData = new FormData(form);
-      const firstname = formData.get('firstname');
-      const lastname = formData.get('lastname');
-      const email = formData.get('email');
-      // const phone = formData.get('phone');
-      // const object = formData.get('object');
-      const message = formData.get('message');
-      console.log(firstname, lastname, email, message);
-    }
+    // // form --------------------------------------------
+    // const handleSubmit = (e) => {
+    //   e.preventDefault();
+    //   const form = e.target;
+    //   const formData = new FormData(form);
+    //   const firstname = formData.get('firstname');
+    //   const lastname = formData.get('lastname');
+    //   const email = formData.get('email');
+    //   // const phone = formData.get('phone');
+    //   // const object = formData.get('object');
+    //   const message = formData.get('message');
+    //   console.log(firstname, lastname, email, message);
+    // }
     //--------------------------------------------------
     return (
       <animated.section id={"secretTab"} 
@@ -58,8 +59,8 @@ const SecretTab = ({disclosure}) => {
           </div>
         </animated.div>
         <animated.div className={style['tab-content']} style={fade}>
-          <p>If you're interested in my work, don't hesitate to contact me : </p>
-          <form onSubmit={handleSubmit} className={style['contact-form']}>
+          <p>If you are interested in my work, don't hesitate to contact me : </p>
+          {/* <form onSubmit={handleSubmit} className={style['contact-form']}>
             <div>
               <div>
                 <input name='firstname' placeholder='First name' type="text" required/>
@@ -73,7 +74,8 @@ const SecretTab = ({disclosure}) => {
               <input name='object' placeholder='Object' type="text" required/>
               <textarea name='message' placeholder='Message' rows='6' className={style['message']} required/>
               <button type='submit' className={style['send-button']}>Send</button>
-          </form>
+          </form> */}
+          <ContactForm />
         </animated.div>
         </animated.section>
     )
