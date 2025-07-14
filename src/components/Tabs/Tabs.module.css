@@ -37,12 +37,12 @@
 }
 .about, .about-clicked {
     h3::before {
-        content: "./";
+        content: "/";
     }
 }
 .project, .project-clicked {
     h3::before {
-        content: "./project_ ";
+        content: "/project_ ";
     }
 }
 .secret-tab {
