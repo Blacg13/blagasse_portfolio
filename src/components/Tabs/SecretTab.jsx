@@ -43,7 +43,7 @@ const SecretTab = ({disclosure}) => {
           </div>
         </animated.div>
         <animated.div className={style['tab-content']} style={fade}>
-              <p>jfjkd</p>
+            <p>jfjkd</p>
         </animated.div>
         </animated.section>
     )

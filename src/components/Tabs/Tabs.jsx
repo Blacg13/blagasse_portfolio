@@ -1,6 +1,6 @@
-// import { useState } from 'react';
+import { useState } from 'react';
 import Tab from "./Tab.jsx"
-//! import SecretTab from "./SecretTab.jsx"
+import SecretTab from "./SecretTab.jsx"
 import tabs from "./tabs.js"
 
 const Tabs = () => {
@@ -10,19 +10,19 @@ const Tabs = () => {
     return b.projectDate - a.projectDate; 
   });
   
-  // const [haveClicked, setHaveClicked] = useState(new Set())
-  //! const [isUnfolded, setUnfolded] = useState(() => localStorage.getItem('isUnfolded') ?? false);
-  // const handleActivation = (childId) => {
-  //   setHaveClicked((prev) => {
-  //     const newSet = new Set(prev);
-  //     newSet.add(childId);
-  //     return newSet;
-  //   });
-  //   if (haveClicked.size === tabs.length - 1) {
-  //     setUnfolded(true)
-  //     localStorage.setItem('isUnfolded', 'true');
-  //   }
-  // };
+  const [haveClicked, setHaveClicked] = useState(new Set())
+  const [isUnfolded, setUnfolded] = useState(() => localStorage.getItem('isUnfolded') ?? false);
+  const handleActivation = (childId) => {
+    setHaveClicked((prev) => {
+      const newSet = new Set(prev);
+      newSet.add(childId);
+      return newSet;
+    });
+    if (haveClicked.size === tabs.length - 1) {
+      setUnfolded(true)
+      localStorage.setItem('isUnfolded', 'true');
+    }
+  };
   
   return (
     <>
@@ -39,11 +39,11 @@ const Tabs = () => {
             content={tab.tabContent}
             githubLink={tab.githubProjectLink}
             liveLink={tab.liveProjectLink}
-            // onActivate={handleActivation}
+            onActivate={handleActivation}
           />
         );
       })}
-      {/* <SecretTab disclosure={isUnfolded} /> */}
+      <SecretTab disclosure={isUnfolded} />
     </>
   );
 };
