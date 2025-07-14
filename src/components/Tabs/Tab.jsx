@@ -15,7 +15,7 @@ const Tab = ({
     onActivate,
   }) => {
     const [isActive, setActive] = useState(false);
-    const [hasClicked, setHasClicked] = useState(false)
+    const [hasClicked, setHasClicked] = useState(() => localStorage.getItem('isUnfolded') ?? false)
     const handleClick = () => {
       setActive(!isActive)
       if (!hasClicked) {

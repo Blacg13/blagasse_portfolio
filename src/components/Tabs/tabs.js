@@ -6,7 +6,7 @@ const tabs = [
       tabImg: undefined,
       tabContent: [
         "I'm passionate about programming and designing intuitive website interfaces. ",
-        "Currently training to become a frontenddeveloper, I'm diving deep into JavaScript and React with a relentless curiosity to master and optimize every line of code. ",
+        "Currently training to become a frontend developer, I'm diving deep into JavaScript and React with a relentless curiosity to master and optimize every line of code. ",
       ],
     },
     {
