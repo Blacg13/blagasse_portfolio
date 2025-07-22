@@ -1,8 +1,16 @@
 /* ----------------------------------------------------------------------------------------------- */
 /**general style**/
 /* ----------------------------------------------------------------------------------------------- */
-.about, .project, .project-clicked {
-    background-color: transparent;
+.tabs-container {
+    display: flex;
+    flex-flow: column nowrap;
+    transition: all 0.2s ease-in;
+    gap: 0.8em;
+    overflow: scroll;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+    .about, .project, .project-clicked {
+        background-color: transparent;
     --padding-value: 2em;
 }
 .project-clicked, .about-clicked {
@@ -112,4 +120,5 @@
     a {
         line-height: 2em;
     }
+}
 }

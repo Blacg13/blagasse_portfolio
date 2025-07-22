@@ -1,5 +1,6 @@
 import Tab from "./Tab.jsx"
 import tabs from "./tabs.js"
+import style from "./Tabs.module.css"
 
 const Tabs = () => {
   const sortedTabs = tabs.sort((a, b) => {
@@ -10,7 +11,7 @@ const Tabs = () => {
 
   
   return (
-    <>
+    <div className={style['tabs-container']}>
       {sortedTabs.map((tab) => {        
         return (
           <Tab
@@ -27,7 +28,7 @@ const Tabs = () => {
           />
         );
       })}
-    </>
+    </div>
   );
 };
 export default Tabs;
