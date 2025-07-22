@@ -12,17 +12,11 @@ const Tab = ({
     content,
     githubLink,
     liveLink,
-    onActivate,
   }) => {
     const [isActive, setActive] = useState(false);
-    const [hasClicked, setHasClicked] = useState(() => localStorage.getItem('isUnfolded') ?? false)
     const handleClick = () => {
       setActive(!isActive)
-      if (!hasClicked) {
-        setHasClicked(true)
-        onActivate(tabId)
-      }    
-    };
+      }
     // animations ----------------------------------
     const spin = useSpring({
       transform: `rotateY(${isActive ? 180 : 0}deg)`,
@@ -39,7 +33,7 @@ const Tab = ({
     return (
       <section 
       id={`${tabId}_${topic}`} 
-      className={hasClicked ? style[`${topic}-clicked`] : style[`${topic}`]} 
+      className={style[`${topic}-clicked`]} 
       >
         <animated.div
           className={style['tab-spin-title']}

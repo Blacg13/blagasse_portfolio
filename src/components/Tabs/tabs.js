@@ -18,7 +18,7 @@ const tabs = [
       tabImg: 'rock-paper-scissors.png',
       tabContent: ['\"Rock, paper, scissors\” game made during my training as a frontend developer at Interface3 (Brussels, Belgium). ', 'The user clicks on one of the images on the left, and the computer randomly selects one of the images with a small animation. '],
       githubProjectLink: 'https://github.com/Blacg13/IF3_PierrePapierCiseaux',
-      liveProjectLink: 'https://www.whatbeatsrock.com/',
+      liveProjectLink: 'https://blacg13.github.io/IF3_rock_paper_scissors/',
     },
     {
       id: 3,
@@ -42,17 +42,6 @@ const tabs = [
       githubProjectLink: 'https://github.com/Blacg13/FestivalFlow',
       liveProjectLink: null,
     },
-    {
-      id: 5,
-      tabTopic: 'project',
-      tabTitle: 'Disneydle',
-      projectDate: new Date(2025, 4),
-      projectLanguages: ['.NET', 'React', 'CSS3'],
-      tabImg: "disneydle.png",
-      tabContent: ['This playful side project was born from a shared idea between a classmate and me: adapting the Pokedle concept to Disney characters. ', 'She handled the backend while I focused on the frontend. Although the site is still a work in progress, we decided to deploy an early version to share it with friends and family. ', 'At the moment, the quote quiz is partially functional, and the UI still needs some polish — but it\'s been a fun way to explore the full development cycle and experiment with new ideas. '],
-      githubProjectLink: 'https://github.com/Blacg13/IF3_Disneydle_WP',
-      liveProjectLink: 'https://disneydle.vercel.app/',
-    }
   ];
   
   export default tabs;
