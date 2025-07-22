@@ -1,7 +1,7 @@
 /* ----------------------------------------------------------------------------------------------- */
 /**general style**/
 /* ----------------------------------------------------------------------------------------------- */
-.about, .project, .project-clicked, .about-clicked, .secret-tab {
+.about, .project, .project-clicked {
     background-color: transparent;
     --padding-value: 2em;
 }
@@ -9,7 +9,7 @@
     --tab-title-color: var(--primary-color);
     --tab-title-color-inner: var(--primary-color-light);
 }
-.secret-tab, .project, .about {
+.project, .about {
     --tab-title-color: var(--secondary-color);
     --tab-title-color-inner: var(--secondary-color);
 }
@@ -43,11 +43,6 @@
 .project, .project-clicked {
     h3::before {
         content: "/project_ ";
-    }
-}
-.secret-tab {
-    h3::before {
-        content: ".";
     }
 }
 /* ----------------------------------------------------------------------------------------------- */
@@ -90,8 +85,6 @@
     
     div {
         border: solid 0.2em var(--primary-color);
-        /* background-color: var(--secondary-color); */
-        /* background-image: radial-gradient(closest-side at 23%, var(--secondary-color), transparent 99%); */
         border-radius: 1.5em;
         font-size: 0.8em;
         line-height: 0.1em;
