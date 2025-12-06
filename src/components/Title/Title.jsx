@@ -13,7 +13,7 @@ const Title = () => {
         </div>
       </div>
       <div className={style['title-links']}>
-        <a target='_blank' href='/files/CV_Lagasse_frontendDev.pdf'>
+        <a target='_blank' href='/files/CV_Lagasse.pdf'>
           <img src='/icons/file-icon.html' alt='' id='file-icon' />
           <p>resume</p>
         </a>
