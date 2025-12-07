@@ -18,11 +18,11 @@ const Title = () => {
           <p>resume</p>
         </a>
         <a target='_blank' href='https://github.com/Blacg13'>
-          <img src='/icons' alt='' id='logo-github' />
+          <img src='null' alt='' id='logo-github' />
           <p>github</p>
         </a>
         <a target='_blank' href='https://www.linkedin.com/in/b%C3%A9n%C3%A9dicte-lagasse/'>
-          <img src='' alt='' id='logo-linkedin' />
+          <img src='null' alt='' id='logo-linkedin' />
           <p>linkedin</p>
         </a>
       </div>
